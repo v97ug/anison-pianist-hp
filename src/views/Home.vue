@@ -41,7 +41,7 @@
           <!--          <button class="btn btn-primary">YouTubeはこちら</button>-->
           <a href="https://www.youtube.com/channel/UCavjtKPARTVL0JXBrFvaZFw">
             <img src="../assets/youtube_here.png" alt="YouTubeはこちらのボタン" v-if="!isSmartPhoneWidth">
-            <img src="../assets/youtube_here_sp.png" alt="YouTubeはこちらのボタン" v-if="isSmartPhoneWidth" width="100%">
+            <img src="../assets/youtube_here_sp.png" alt="YouTubeはこちらのボタン" v-if="isSmartPhoneWidth" class="w-100">
           </a>
         </div>
       </div>
