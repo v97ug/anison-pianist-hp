@@ -1,20 +1,28 @@
 <template>
-  <div class="nav-container">
-    <nav class="navigation">
-      <router-link to="/" class="col-md text-center">トップ</router-link>
-      <router-link to="/" class="col-md text-center">プロフィール</router-link>
-      <router-link to="/" class="col-md text-center">ライブ</router-link>
-      <router-link to="/" class="col-md text-center">YouTube</router-link>
-      <router-link to="/" class="col-md text-center">お問い合わせ</router-link>
-    </nav>
-  </div>
+  <nav class="nav-container navbar d-flex">
+    <div>
+      Anision Pianist
+    </div>
+    <div class="menu-button">
+      <div class="navbar-toggler" data-toggle="collapse" data-target="#navmenu1">Menu</div>
+    </div>
+    <div id="navmenu1" class="collapse navbar-collapse navigation">
+      <div class="navbar-nav">
+        <router-link to="/" class="nav-item nav-link">トップ</router-link>
+        <router-link to="/" class="nav-item nav-link">プロフィール</router-link>
+        <router-link to="/" class="nav-item nav-link">ライブ</router-link>
+        <router-link to="/" class="nav-item nav-link">YouTube</router-link>
+        <router-link to="/" class="nav-item nav-link">お問い合わせ</router-link>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script lang="ts">
   import {Component, Vue} from 'vue-property-decorator'
 
   @Component
-  export default class BlackHeader extends Vue {
+  export default class BlackHeaderHamburger extends Vue {
   }
 </script>
 
@@ -62,8 +70,12 @@
     transform-origin: center top;
     transition: transform .3s;
   }
+
   a:hover::after {
     transform: scale(1, 1);
   }
 
+  .menu-button {
+    border: 1px solid white;
+  }
 </style>
