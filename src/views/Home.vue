@@ -101,7 +101,7 @@
     }
   })
   export default class Home extends Vue {
-    isSmartPhoneWidth = window.innerWidth < 768
+    isSmartPhoneWidth = window.innerWidth <= 768
   }
 </script>
 
@@ -170,7 +170,7 @@
     display: flex;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     .top-container {
       padding-bottom: 70px;
     }
