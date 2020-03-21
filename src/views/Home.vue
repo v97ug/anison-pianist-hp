@@ -3,13 +3,14 @@
     <black-header v-if="!isSmartPhoneWidth"></black-header>
     <black-header-hamburger v-if="isSmartPhoneWidth"></black-header-hamburger>
 
+    <chat-bot></chat-bot>
     <div class="top-container">
       <div class="container">
         <div class="text-center">
           <!--          <img class="anison-pianist-text-img" -->
           <!--               src="../assets/anison_pianist_takechan.png"-->
           <!--               height="240"-->
-          <!--               alt="Anision pianist TAKECHANのテキスト画像">-->
+          <!--                alt="Anision pianist TAKECHANのテキスト画像">-->
           <img class="anison-pianist-text-img"
                src="../assets/anison_pianist_takechan.png"
                width="85%"
@@ -90,10 +91,12 @@
   import HelloWorld from '@/components/HelloWorld.vue'
   import GorgeousHeader from '@/components/GorgeousHeader.vue'
   import BlackHeader from '@/components/BlackHeader.vue'
-  import BlackHeaderHamburger from '@/components/BlackHeaderHamburger.vue' // @ is an alias to /src
+  import BlackHeaderHamburger from '@/components/BlackHeaderHamburger.vue'
+  import ChatBot from '@/components/ChatBot.vue' // @ is an alias to /src
 
   @Component({
     components: {
+      ChatBot,
       BlackHeaderHamburger,
       BlackHeader,
       GorgeousHeader,
@@ -104,7 +107,6 @@
     isSmartPhoneWidth = window.innerWidth <= 768
   }
 </script>
-
 
 <style>
   body {
